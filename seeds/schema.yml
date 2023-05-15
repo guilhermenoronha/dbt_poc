@@ -1,0 +1,11 @@
+version: 2
+
+seeds:
+    - name: employees
+      description: manual map of employes to customers
+      columns:
+        - name: employee_id
+          tests:
+          - unique
+          - not_null
+          
