@@ -6,7 +6,7 @@ payment as (select * from {{ref('stg_payment')}}),
 order_payments as (
     select
         order_id,
-        sum(case when status = 'success' then amount_in_dollars end) as amount_in_dollars
+        sum(case when payment_status = 'success' then amount_in_dollars end) as amount_in_dollars
 
     from payment
     group by 1

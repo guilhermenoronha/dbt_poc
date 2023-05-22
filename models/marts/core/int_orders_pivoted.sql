@@ -10,7 +10,7 @@ pivoted as (
             {%- if not loop.last -%} , {%- endif %}
         {% endfor -%}
     from payments
-    where status = 'success'
+    where payment_status = 'success'
     group by 1
 )
 
